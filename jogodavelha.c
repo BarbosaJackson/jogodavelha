@@ -103,229 +103,248 @@ int computer(char *mapa) {
 	}
 	// verifica o centro
 	if(mapa[4] == '4'){
-		points[4] += 5;
+		points[4] += 2;
 	}
 
 	// verifica os cantos
 	if(mapa[0] == '0'){
-		points[0] += 2;
+		points[0] += 1;
 	} 
 	if(mapa[2] == '2') {
-		points[2] += 2;
+		points[2] += 1;
 	}
 	if(mapa[6] == '6') {
-		points[6] += 2;
+		points[6] += 1;
 	}
 	if(mapa[8] == '8') {
-		points[8] += 8;
+		points[8] += 1;
 	}
 
 	// chance de vitória na posição 0
 	if(mapa[0] == '0') {
 		if(mapa[1] == 'O' && mapa[2] == 'O') {
-			points[0] += 3;
+			points[0] += 4;
 		}
 		if(mapa[3] == 'O' && mapa[6] == 'O') {
-			points[0] += 3;
+			points[0] += 4;
 		}
 		if(mapa[4] == 'O' && mapa[8] == 'O') {
-			points[0] += 3;
+			points[0] += 4;
 		}
 	}
 
 	// chance de vitória na posição 1
 	if(mapa[1] == '1') {
 		if(mapa[0] == 'O' && mapa[2] == 'O') {
-			points[1] += 3;
+			points[1] += 4;
 		}
 		if(mapa[4] == 'O' && mapa[7] == 'O') {
-			points[1] += 3;
+			points[1] += 4;
 		}
 	}
 
 	// chance de vitória na posição 2
 	if(mapa[2] == '2'){
 		if(mapa[0] == 'O' && mapa[1] == 'O'){
-			points[2] += 3;
+			points[2] += 4;
 		}
 		if(mapa[5] == 'O' && mapa[8] == 'O') {
-			points[2] += 3;
+			points[2] += 4;
 		}
 		if(mapa[4] == 'O' && mapa[6] == 'O') {
-			points[2] += 3;
+			points[2] += 4;
 		}
 	}
 
 	// chance de vitória na posição 3
 	if(mapa[3] == '3') {
 		if(mapa[0] == 'O' && mapa[6] == 'O') {
-			points[3] += 3;
+			points[3] += 4;
 		}
 		if(mapa[4] == 'O' && mapa[5] == 'O') {
-			points[3] += 3;
+			points[3] += 4;
 		}
 	}
 
 	// chance de vitória na posição 4
 	if(mapa[4] == '4') {
 		if(mapa[0] == 'O' && mapa[8] == 'O') {
-			points[4] += 3;
+			points[4] += 4;
 		}
 		if(mapa[1] == 'O' && mapa[7] == 'O') {
-			points[4] += 3;
+			points[4] += 4;
 		}
 		if(mapa[3] == 'O' && mapa[5] == 'O') {
-			points[4] += 3;
+			points[4] += 4;
 		}
 	}
 
 	// chance de vitória na posição 5
 	if(mapa[5] == '5'){
 		if(mapa[3] == 'O' && mapa[4] == 'O'){
-			points[5] += 3;
+			points[5] += 4;
 		}
 		if(mapa[2] == 'O' && mapa[8] == 'O') {
-			points[5] += 3;
+			points[5] += 4;
 		}
 	}
 
 	// chance de vitória na posição 6
 	if(mapa[6] == '6') {
 		if(mapa[0] == 'O' && mapa[3] == 'O') {
-			points[6] += 3;
+			points[6] += 4;
 		}
 		if(mapa[7] == 'O' && mapa[8] == 'O') {
-			points[6] += 3;
+			points[6] += 4;
 		}
 	}
 
 	// chance de vitória na posição 7
 	if(mapa[7] == '7') {
 		if(mapa[6] == 'O' && mapa[8] == 'O') {
-			points[7] += 3;
+			points[7] += 4;
 		}
 		if(mapa[1] == 'O' && mapa[4] == 'O') {
-			points[7] += 3;
+			points[7] += 4;
 		}
 	}
 
 	// chance de vitória na posição 8
 	if(mapa[8] == '8') {
 		if(mapa[2] == 'O' && mapa[5] == 'O') {
-			points[8] += 3;
+			points[8] += 4;
 		}
 		if(mapa[6] == 'O' && mapa[7] == 'O') {
-			points[8] += 3;
+			points[8] += 4;
 		}
 		if(mapa[0] == 'O' && mapa[4] == 'O') {
-			points[8] += 3;
+			points[8] += 4;
 		}
 	}
 
 	// chance de evitar vitória na posiçao 0
 	if(mapa[0] == '0') {
 		if(mapa[4] == 'X' && mapa[8] == 'X') {
-			points[0] += 3;
+			points[0] += 4;
 		}
 		if(mapa[1] == 'X' && mapa[2] == 'X') {
-			points[0] += 3;
+			points[0] += 4;
 		}
 		if(mapa[3] == 'X' && mapa[6] == 'X') {
-			points[0] += 3;
+			points[0] += 4;
 		}
 	}
 
 	// chance de evitar vitória na posição 1
 	if(mapa[1] == '1') {
 		if(mapa[0] == 'X' && mapa[2] == 'X') {
-			points[1] += 3;
+			points[1] += 4;
 		}
 		if(mapa[4] == 'X' && mapa[7] == 'X') {
-			points[1] += 3;
+			points[1] += 4;
 		}
 	}
 
 	// chance de evitar vitória na posição 2
 	if(mapa[2] == '2') {
 		if(mapa[0] == 'X' && mapa[1] == 'X') {
-			points[2] += 3;
+			points[2] += 4;
 		}
 		if(mapa[4] == 'X' && mapa[6] == 'X') {
-			points[2] += 3;
+			points[2] += 4;
 		}
 		if(mapa[5] == 'X' && mapa[8] == 'X') {
-			points[2] += 3;
+			points[2] += 4;
 		}
 	}
 
 	// chance de evitar vitória na posição 3
 	if(mapa[3] == '3') {
 		if(mapa[0] == 'X' && mapa[6] == 'X') {
-			points[3] += 3;
+			points[3] += 4;
 		}
 		if(mapa[4] == 'X' && mapa[5] == 'X') {
-			points[3] += 3;
+			points[3] += 4;
 		}
 	}
 	// chance de evitar vitória na posição 4
 	if(mapa[4] == '4') {
 		if(mapa[0] == 'X' && mapa[8] == 'X') {
-			points[4] += 3;
+			points[4] += 4;
 		}
 		if(mapa[2] == 'X' && mapa[6] == 'X') {
-			points[4] += 3;
+			points[4] += 4;
 		}
 		if(mapa[1] == 'X' && mapa[7] == 'X') {
-			points[4] += 3;
+			points[4] += 4;
 		}
 		if(mapa[3] == 'X' && mapa[5] == 'X') {
-			points[4] += 3;
+			points[4] += 4;
 		}
 	}
 
 	// chance de evitar vitória na posição 5
 	if(mapa[5] == '5') {
 		if(mapa[2] == 'X' && mapa[8] == 'X') {
-			points[5] += 3;
+			points[5] += 4;
 		}
 		if(mapa[3] == 'X' && mapa[4] == 'X') {
-			points[5] += 3;
+			points[5] += 4;
 		}
 	}
 
 	// chance de evitar vitória na posição 6
 	if(mapa[6] == '6') {
 		if(mapa[0] == 'X' && mapa[3] == 'X') {
-			points[6] += 3;
+			points[6] += 4;
 		}
 		if(mapa[7] == 'X' && mapa[8] == 'X') {
-			points[6] += 3;
+			points[6] += 4;
 		}
 		if(mapa[2] == 'X' && mapa[4] == 'X') {
-			points[6] += 3;
+			points[6] += 4;
 		}
 	}
 
 	// chance de evitar vitória na posição 7
 	if(mapa[7] == '7') {
 		if(mapa[1] == 'X' && mapa[4] == 'X') {
-			points[7] += 3;
+			points[7] += 4;
 		}
 		if(mapa[6] == 'X' && mapa[8] == 'X') {
-			points[7] += 3;
+			points[7] += 4;
 		}
 	}
 
 	// chance de evitar vitória na posição 8
 	if(mapa[8] == '8') {
 		if(mapa[6] == 'X' && mapa[7] == 'X') {
-			points[8] += 3;
+			points[8] += 4;
 		}
 		if(mapa[0] == 'X' && mapa[4] == 'X') {
-			points[8] += 3;
+			points[8] += 4;
 		}
 		if(mapa[2] == 'X' && mapa[5] == 'X') {
-			points[8] += 3;
+			points[8] += 4;
+		}
+	}
+
+	// checa se tem alguém na linha, coluna ou diagonal da posição 0
+	if(mapa[0] == '0') {
+		if(mapa[4] == 'X' || mapa[8] == 'X' || mapa[3] == 'X' || mapa[6] == 'X' || mapa[1] == 'X' || mapa[2] == 'X') {
+			points[0] -= 2;
+		}
+	}
+	// checa se tem alguém na linha, coluna ou diagonal da posição 1
+	if(mapa[1] == '1') {
+		if(mapa[4] == 'X' || mapa[7] == 'X' || mapa[0] == 'X' || mapa[2] == 'X') {
+			points[1] -= 2;
+		}
+	}
+	// checa se tem alguém na linha, coluna ou diagonal da posição 2
+	if(mapa[2] == '2') {
+		if(mapa[0] == 'X' || mapa[1] == 'X' || mapa[4] == 'X' || mapa[6] == 'X' || mapa[5] == 'X' || mapa[8] == 'X') {
+			points[2] -= 2;
 		}
 	}
 	// busca a maior pontuação salva sua posição, esta deve ser a jogada
